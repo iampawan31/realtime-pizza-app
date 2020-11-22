@@ -1,0 +1,12 @@
+{
+  "name": "realtime-pizza-app",
+  "version": "1.0.0",
+  "description": "Realtime Pizza Application built using expressjs, mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Pawan Kumar",
+  "license": "ISC"
+}
