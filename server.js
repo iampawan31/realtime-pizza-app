@@ -6,6 +6,9 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+// Assets
+app.use(express.static('public'));
+
 // Homepage Route
 app.get('/', (req, res) => {
   res.render('home');
