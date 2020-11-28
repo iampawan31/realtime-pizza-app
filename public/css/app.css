@@ -29,15 +29,32 @@ section.hero {
 }
 
 .footer {
-  background: #f8f8f8;
+  background: #fe5f1e;
 }
 
 section.cart {
   background: #f8f8f8;
+  min-height: calc(100vh - 146px);
 }
 
 section.cart .total-amount {
   color: #fe5f1e;
+}
+
+section.login,
+section.register {
+  background: #f8f8f8;
+  min-height: calc(100vh - 146px);
+}
+
+section.login a,
+section.register a {
+  color: #fe5f1e;
+}
+
+section.login a:hover,
+section.register a:hover {
+  color: #b23301;
 }
 
 .btn-primary {

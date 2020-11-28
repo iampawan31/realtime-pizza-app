@@ -1,0 +1,64 @@
+<section class="register flex justify-center">
+  <div class="max-w-md w-full space-y-8">
+    <form
+      class="mt-8 space-y-6 bg-white shadow-md rounded px-8 pt-6 pb-8"
+      action="#"
+      method="POST"
+    >
+      <input type="hidden" name="remember" value="true" />
+      <div class="mb-4 text-center">
+        <h1 class="font-bold text-3xl">Register</h1>
+      </div>
+      <div class="mb-4">
+        <label for="full-name" class="sr-only">Full Name</label>
+        <input
+          id="full-name"
+          name="fullname"
+          type="text"
+          required
+          class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+          placeholder="Full Name"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="email-address" class="sr-only">Email address</label>
+        <input
+          id="email-address"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+          placeholder="Email address"
+        />
+      </div>
+      <div class="mb-6">
+        <label for="password" class="sr-only">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+          placeholder="Password"
+        />
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <button
+            type="submit"
+            class="btn-primary px-6 py-2 rounded-full text-white font-bold"
+          >
+            Register
+          </button>
+        </div>
+        <div class="text-sm">
+          <a href="#" class="font-medium">
+            Have an account? Login here
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

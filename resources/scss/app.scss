@@ -30,13 +30,26 @@ section.hero {
 }
 
 .footer {
-  background: $secondary;
+  background: $primary;
 }
 
 section.cart {
   background: $secondary;
+  min-height: calc(100vh - 146px);
   .total-amount {
     color: $primary;
+  }
+}
+
+section.login,
+section.register {
+  background: $secondary;
+  min-height: calc(100vh - 146px);
+  a {
+    color: $primary;
+    &:hover {
+      color: $primary-hover;
+    }
   }
 }
 
