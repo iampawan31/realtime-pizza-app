@@ -32,13 +32,32 @@ section.hero {
   background: #f8f8f8;
 }
 
-.add-to-cart {
+section.cart {
+  background: #f8f8f8;
+}
+
+section.cart .total-amount {
+  color: #fe5f1e;
+}
+
+.btn-primary {
+  background: #fe5f1e;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #b23301;
+}
+
+.add-to-cart,
+.order-now-button {
   border: 2px solid #fe5f1e;
   color: #fe5f1e;
   transition: all 0.3s ease-in-out;
 }
 
-.add-to-cart:hover {
+.add-to-cart:hover,
+.order-now-button:hover {
   background: #fe5f1e;
   color: #fff;
   border-color: #fff;

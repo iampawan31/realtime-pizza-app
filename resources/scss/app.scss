@@ -33,7 +33,23 @@ section.hero {
   background: $secondary;
 }
 
-.add-to-cart {
+section.cart {
+  background: $secondary;
+  .total-amount {
+    color: $primary;
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  transition: $smooth;
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+.add-to-cart,
+.order-now-button {
   border: 2px solid $primary;
   color: $primary;
   transition: $smooth;
