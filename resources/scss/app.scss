@@ -1,4 +1,6 @@
 @import './variables';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/metroui.scss';
 
 body {
   font-family: 'Lato' sans-serif;
@@ -72,5 +74,8 @@ section.register {
     color: $pure;
     border-color: $pure;
     transition: $smooth;
+  }
+  &:focus {
+    outline: none;
   }
 }
