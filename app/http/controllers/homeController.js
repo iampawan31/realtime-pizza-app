@@ -1,4 +1,4 @@
-const Menu = require('../../models/menus');
+const Menu = require('../../models/menu');
 
 function homeController() {
   return {

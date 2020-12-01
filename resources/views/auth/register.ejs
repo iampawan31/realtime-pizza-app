@@ -2,34 +2,33 @@
   <div class="max-w-md w-full space-y-8">
     <form
       class="mt-8 space-y-6 bg-white shadow-md rounded px-8 pt-6 pb-8"
-      action="#"
+      action="/register"
       method="POST"
     >
-      <input type="hidden" name="remember" value="true" />
       <div class="mb-4 text-center">
         <h1 class="font-bold text-3xl">Register</h1>
       </div>
       <div class="mb-4">
-        <label for="full-name" class="sr-only">Full Name</label>
+        <label for="name" class="sr-only">Name</label>
         <input
-          id="full-name"
-          name="fullname"
+          id="name"
+          value="<%= messages.name %>"
+          name="name"
           type="text"
-          required
           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
-          placeholder="Full Name"
+          placeholder="Name"
         />
       </div>
       <div class="mb-4">
         <label for="email-address" class="sr-only">Email address</label>
         <input
           id="email-address"
+          value="<%= messages.email %>"
           name="email"
           type="email"
-          autocomplete="email"
           required
           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
-          placeholder="Email address"
+          placeholder="yourname@example.com"
         />
       </div>
       <div class="mb-6">
@@ -38,12 +37,16 @@
           id="password"
           name="password"
           type="password"
-          autocomplete="current-password"
           required
           class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
-          placeholder="Password"
+          placeholder="******"
         />
       </div>
+      <% if (messages.error) { %>
+      <span class="text-red-500 text-small mt-10"
+        ><strong>Error:</strong> <%= messages.error %></span
+      >
+      <% } %>
       <div class="flex items-center justify-between">
         <div class="flex items-center">
           <button

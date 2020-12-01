@@ -2,15 +2,19 @@ const homeController = require('../app/http/controllers/homeController');
 const authController = require('../app/http/controllers/authController');
 const cartController = require('../app/http/controllers/customers/cartController');
 
+// Middleware
+const guest = require('../app/http/middleware/guest');
+
 function initRoutes(app) {
   // Homepage Route
   app.get('/', homeController().index);
 
   // Authentication Route
-  app.get('/login', authController().login);
-
-  // Authentication Route
-  app.get('/register', authController().register);
+  app.get('/login', guest, authController().login);
+  app.post('/login', authController().postLogin);
+  app.get('/register', guest, authController().register);
+  app.post('/register', authController().postRegister);
+  app.post('/logout', authController().logout);
 
   // Cart Routes
   app.get('/cart', cartController().index);
