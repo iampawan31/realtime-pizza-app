@@ -397,3 +397,7 @@ section.register a:hover {
   outline: none;
 }
 
+a.link {
+  color: #fe5f1e;
+}
+

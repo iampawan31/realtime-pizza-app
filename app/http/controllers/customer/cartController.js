@@ -3,7 +3,7 @@ const { json } = require('express');
 function cartController() {
   return {
     index(req, res) {
-      res.render('customers/cart');
+      res.render('customer/cart');
     },
     update(req, res) {
       if (!req.session.cart) {
