@@ -2,7 +2,7 @@ import axios from 'axios';
 import Noty from 'noty';
 import moment from 'moment';
 
-export function initAdmin() {
+export function initAdmin(socket) {
   const orderTableBody = document.querySelector('#orderTableBody');
   let orders = [];
   let markup;
@@ -96,4 +96,18 @@ export function initAdmin() {
       })
       .join('');
   }
+
+  // Socket
+  socket.on('orderPlaced', (order) => {
+    new Noty({
+      text: 'New Order Received',
+      theme: 'metroui',
+      timeout: 1000,
+      type: 'success',
+    }).show();
+
+    orders.unshift(order);
+    orderTableBody.innerHTML = '';
+    orderTableBody.innerHTML = generateMarkup(orders);
+  });
 }
